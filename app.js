@@ -33,7 +33,7 @@ const mongoose = require('mongoose')
  { useNewUrlParser: true,  useUnifiedTopology: true }
 
  );
-
+mongoose.Promise = global.Promise;
  
  app.use((req, res, next)=>{
      const error = new Error('Not found') 
